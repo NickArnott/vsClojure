@@ -34,6 +34,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
+    <IncludeDebugSymbolsInVSIXContainer>true</IncludeDebugSymbolsInVSIXContainer>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,24 +132,47 @@
     <Content Include="README.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="ItemTemplates.zip" />
     <None Include="Runtimes\ClojureCLR-1.6.0.zip" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
     <None Include="Templates\CSharp\ProjectItems\ClojureScript Files\Code File.cljs" />
-    <None Include="Templates\ProjectItems\Clojure\ADONetDataReader.clj" />
-    <None Include="Templates\ProjectItems\Clojure\ASPNetMVCController.clj" />
-    <None Include="Templates\ProjectItems\Clojure\WindowsForm.clj" />
-    <None Include="Templates\Projects\ASPNet MVC\ASP.Net MVC Controller Library.cljproj" />
-    <None Include="Templates\Projects\ASPNet MVC\HomeController.clj" />
-    <None Include="Templates\Projects\Class Library\Class Library.cljproj" />
-    <None Include="Templates\Projects\Class Library\Class1.clj" />
-    <None Include="Templates\Projects\Console Application\Console Application.cljproj" />
-    <None Include="Templates\Projects\Console Application\program.clj" />
-    <None Include="Templates\Projects\Windows Forms Application\Form1.clj" />
-    <None Include="Templates\Projects\Windows Forms Application\program.clj" />
-    <None Include="Templates\Projects\Windows Forms Application\Windows Forms Application.cljproj" />
+    <Content Include="Templates\ProjectItems\Clojure\ADONetDataReader.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\ProjectItems\Clojure\ASPNetMVCController.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\ProjectItems\Clojure\WindowsForm.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\ASPNet MVC\ASP.Net MVC Controller Library.cljproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\ASPNet MVC\HomeController.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Class Library\Class Library.cljproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Class Library\Class1.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Console Application\Console Application.cljproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Console Application\program.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Windows Forms Application\Form1.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Windows Forms Application\program.clj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Windows Forms Application\Windows Forms Application.cljproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <VSCTCompile Include="ClojurePackage.xml">
@@ -157,10 +181,18 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Templates\Projects\ASPNet MVC\Clojure.ico" />
-    <Content Include="Templates\Projects\Class Library\Clojure.ico" />
-    <Content Include="Templates\Projects\Console Application\Clojure.ico" />
-    <Content Include="Templates\Projects\Windows Forms Application\Clojure.ico" />
+    <Content Include="Templates\Projects\ASPNet MVC\Clojure.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Class Library\Clojure.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Console Application\Clojure.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Projects\Windows Forms Application\Clojure.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="VSIXIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -203,7 +235,7 @@
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <TemplateType>Item</TemplateType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <VSIXSubPath>ItemTemplates\ClojureScript</VSIXSubPath>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

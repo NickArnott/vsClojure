@@ -4,6 +4,7 @@
 
 using System.ComponentModel.Composition;
 using System.Windows.Media;
+using ClojureExtension.Editor.Classification;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 
@@ -16,7 +17,8 @@ namespace Microsoft.ClojureExtension.Editor.BraceMatching
     {
         public BraceNotFoundFormatDefinition()
         {
-            BackgroundColor = Colors.MistyRose;
+            BackgroundColor = Theme.Current.BraceNotFound;
+            BackgroundCustomizable = true;
             DisplayName = "Clojure - Brace Not Found";
             ZOrder = 5;
         }
@@ -29,7 +31,8 @@ namespace Microsoft.ClojureExtension.Editor.BraceMatching
     {
         public BraceFoundFormatDefinition()
         {
-            BackgroundColor = Colors.LightBlue;
+            BackgroundColor = Theme.Current.BraceFound;
+            BackgroundCustomizable = true;
             DisplayName = "Clojure - Brace Found";
             ZOrder = 5;
         }

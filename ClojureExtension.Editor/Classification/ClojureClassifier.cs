@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using ClojureExtension.Editor.Classification;
 using ClojureExtension.Parsing;
 using Microsoft.ClojureExtension.Editor.Tagger;
 using Microsoft.VisualStudio.Text;
@@ -27,21 +28,21 @@ namespace Microsoft.ClojureExtension.Editor.Classification
 			_aggregator = clojureTagAggregator;
 			_aggregator.TagsChanged += TokenTagsChanged;
 			_clojureTypes = new Dictionary<TokenType, IClassificationType>();
-			_clojureTypes[TokenType.Symbol] = typeService.GetClassificationType("ClojureSymbol");
-			_clojureTypes[TokenType.String] = typeService.GetClassificationType("ClojureString");
-			_clojureTypes[TokenType.Number] = typeService.GetClassificationType("ClojureNumber");
-			_clojureTypes[TokenType.HexNumber] = typeService.GetClassificationType("ClojureNumber");
-			_clojureTypes[TokenType.Comment] = typeService.GetClassificationType("ClojureComment");
-			_clojureTypes[TokenType.Keyword] = typeService.GetClassificationType("ClojureKeyword");
-			_clojureTypes[TokenType.Character] = typeService.GetClassificationType("ClojureCharacter");
-			_clojureTypes[TokenType.BuiltIn] = typeService.GetClassificationType("ClojureBuiltIn");
-			_clojureTypes[TokenType.Boolean] = typeService.GetClassificationType("ClojureBoolean");
-			_clojureTypes[TokenType.ListStart] = typeService.GetClassificationType("ClojureList");
-			_clojureTypes[TokenType.ListEnd] = typeService.GetClassificationType("ClojureList");
-			_clojureTypes[TokenType.VectorStart] = typeService.GetClassificationType("ClojureVector");
-			_clojureTypes[TokenType.VectorEnd] = typeService.GetClassificationType("ClojureVector");
-			_clojureTypes[TokenType.MapStart] = typeService.GetClassificationType("ClojureMap");
-			_clojureTypes[TokenType.MapEnd] = typeService.GetClassificationType("ClojureMap");
+			_clojureTypes[TokenType.Symbol] = typeService.GetClassificationType(Classifications.ClojureSymbol);
+			_clojureTypes[TokenType.String] = typeService.GetClassificationType(Classifications.ClojureString);
+			_clojureTypes[TokenType.Number] = typeService.GetClassificationType(Classifications.ClojureNumber);
+			_clojureTypes[TokenType.HexNumber] = typeService.GetClassificationType(Classifications.ClojureNumber);
+			_clojureTypes[TokenType.Comment] = typeService.GetClassificationType(Classifications.ClojureComment);
+			_clojureTypes[TokenType.Keyword] = typeService.GetClassificationType(Classifications.ClojureKeyword);
+			_clojureTypes[TokenType.Character] = typeService.GetClassificationType(Classifications.ClojureCharacter);
+			_clojureTypes[TokenType.BuiltIn] = typeService.GetClassificationType(Classifications.ClojureBuiltIn);
+			_clojureTypes[TokenType.Boolean] = typeService.GetClassificationType(Classifications.ClojureBoolean);
+			_clojureTypes[TokenType.ListStart] = typeService.GetClassificationType(Classifications.ClojureList);
+			_clojureTypes[TokenType.ListEnd] = typeService.GetClassificationType(Classifications.ClojureList);
+			_clojureTypes[TokenType.VectorStart] = typeService.GetClassificationType(Classifications.ClojureVector);
+			_clojureTypes[TokenType.VectorEnd] = typeService.GetClassificationType(Classifications.ClojureVector);
+			_clojureTypes[TokenType.MapStart] = typeService.GetClassificationType(Classifications.ClojureMap);
+			_clojureTypes[TokenType.MapEnd] = typeService.GetClassificationType(Classifications.ClojureMap);
 		}
 
 		public void TokenTagsChanged(object sender, TagsChangedEventArgs e)
